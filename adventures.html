@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Ideas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        .card:hover {
+            background-color: #f8f9fa; 
+            transition: background-color 0.3s ease-in-out; /* Add transition for a smooth effect */
+        }
+
+        .card:hover .card-title {
+            color: #007bff; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-hiking"></i> ExploreSafar </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Go to home page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+    </nav>
+
+    <div class="container mt-10">
+        <h1 class="text-center">Adventure Ideas!</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/category-1.jpg" alt="BungeeJumpingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Bungee Jump</h3>
+                        <p class="card-text">Bungee jumping is an activity that involves a person jumping from a great
+                            height while connected to a large elastic cord.</p>
+                        <p class="card-text"><strong>Price:</strong> $100 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Bungee Jump', 100)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/category-2.jpg" alt="ZipLinesImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Zip Lines</h3>
+                        <p class="card-text">A zip-line, zip line, zip-wire, or flying fox is a pulley suspended on a
+                            cable, usually made of stainless steel, mounted on a slope.</p>
+                        <p class="card-text"><strong>Price:</strong> $75 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Zip Lines', 75)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/category-3.jpg" alt="CanoeingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Canoeing</h3>
+                        <p class="card-text">Canoeing is an activity which involves paddling a canoe with a
+                            single-bladed paddle.</p>
+                        <p class="card-text"><strong>Price:</strong> $50 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Canoeing', 50)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img src="images/rock-climbing.jpeg" alt="RockClimbingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Rock Climbing</h3>
+                        <p class="card-text">Rock climbing is a sport in which participants climb up, down, or across
+                            natural rock formations or artificial rock walls.</p>
+                        <p class="card-text"><strong>Price:</strong> $80 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Rock Climbing', 80)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img src="images/paragliding.jpg" alt="ParaglidingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Paragliding</h3>
+                        <p class="card-text">Paragliding is the recreational and competitive adventure sport of flying
+                            paragliders.</p>
+                        <p class="card-text"><strong>Price:</strong> $120 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Paragliding', 120)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img src="images/skiing.jpg" alt="SkiingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Skiing</h3>
+                        <p class="card-text">Skiing is a mode of transport, recreational activity, and competitive winter
+                            sport in which the participant uses skis to glide on snow.</p>
+                        <p class="card-text"><strong>Price:</strong> $90 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Skiing', 90)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img src="images/mountain-biking.jpg" alt="MountainBikingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Mountain Biking</h3>
+                        <p class="card-text">Mountain biking is a sport of riding bicycles off-road, often over rough
+                            terrain, using specially designed mountain bikes.</p>
+                        <p class="card-text"><strong>Price:</strong> $60 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Mountain Biking', 60)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="card">
+                    <img src="images/skydiving.jpg" alt="SkydivingImg" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">Skydiving</h3>
+                        <p class="card-text">Skydiving, also called parachuting, is the sport of jumping out of an airplane
+                            and performing acrobatic maneuvers in the air during a descent.</p>
+                        <p class="card-text"><strong>Price:</strong> $150 per person</p>
+                        <button class="btn btn-primary" onclick="openBookingModal('Skydiving', 150)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel">Book Your Adventure</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="bookingForm" method="post" action="payments.html">
+                            <div class="form-group">
+                                <label for="adventureName">Adventure Name</label>
+                                <input type="text" class="form-control" id="adventureName" name="adventureName" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price per Person</label>
+                                <input type="text" class="form-control" id="price" name="price" readonly>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Proceed</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script>
+            function openBookingModal(adventureName, price) {
+                $('#adventureName').val(adventureName);
+                $('#price').val('$' + price);
+                $('#bookingModal').modal('show');
+            }
+        </script>
+    </body>
+
+</html>

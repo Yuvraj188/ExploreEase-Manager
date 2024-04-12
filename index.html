@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreSafar.com</title>
+    <link rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap
+  .min.css ">
+  
+
+</head>
+<script>
+    // JS for handling button click and redirection
+    document.getElementById('login-btn').addEventListener('click', function() {
+        window.location.href = 'login.html'; // Redirect to login.html
+    });
+
+    // JS to toggle the search bar visibility
+    document.getElementById('search-btn').addEventListener('click', function() {
+        document.getElementById('search-bar').classList.toggle('active');
+    });
+</script>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hiking"></i> ExploreSafar.com</a>
+        <nav class="navbar">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="#home">home</a>
+            <a href="adventures.html">Adventures</a>
+            <a href="contact_us.html">contact</a>
+            <a href="login.php">Login</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div> 
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+    </header>
+
+    <div class="search-form">
+        <div id="close-search" class="fas fa-times"></div>
+        <form action="">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+
+    <section class="home" id="home">
+   
+        <div class="wrapper">
+                <div class="box" style="background: url(images/home1.jpg) no-repeat;">
+                <div class="content">
+                    <span>never stop</span>
+                    <h3>exploring</h3>
+                    <a href="signup.php" class="btn">Get Started. Sign Up now!</a>
+                </div> 
+                </div>  
+        </div>
+    </section>
+
+
+        
+    <script src="js/script.js"></script>
+</body>
+</html>
